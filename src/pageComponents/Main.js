@@ -2,7 +2,6 @@ import Layout from "../components/Layout"
 import Questionnaire from "../components/Questionnaire"
 
 const Main = () => {
-    // const [score, setScore] = useState(100)
     return (
         <Layout>
             <div className="grid gap-y-2">
