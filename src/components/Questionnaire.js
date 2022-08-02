@@ -19,13 +19,13 @@ const Questionnaire = () => {
     return (
         <>
             <form className="border-2 border-sky-500 p-2">
-                <ol className="list-decimal list-inside">
-                    {questions}
-                </ol>
                 <div className="flex justify-center">
                     <p>SCORE</p>
                     <p>{score}</p>
                 </div>
+                <ol className="list-decimal list-inside">
+                    {questions}
+                </ol>
             </form>
         </>
     )
