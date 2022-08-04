@@ -18,7 +18,7 @@ const Questionnaire = () => {
     )
     return (
         <>
-            <form className="border-2 border-sky-500 p-2">
+            <form className="bg-white shadow-2xl p-4 rounded-xl">
                 <div className="flex justify-center">
                     <p>SCORE</p>
                     <p>{score}</p>
