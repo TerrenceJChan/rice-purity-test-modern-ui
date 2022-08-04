@@ -11,19 +11,21 @@ const Questionnaire = () => {
         }
     }
     const questions = purityQuestions.map((question) =>
-        <li key={question.key}>
-            <input type="checkbox" name={question.key + 1} className="mr-1" onChange={adjustScore} />
-            <label htmlFor={question.key + 1}>{question.question}</label>
-        </li>
+        <label key={question.key + 1} htmlFor={question.key + 1} >
+            <li className="text-xl bg-red-100 transition-colors hover:bg-red-300 p-2 rounded-lg shadow-md cursor-pointer">
+                <input type="checkbox" name={question.key + 1} id={question.key + 1} className="mr-1 focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" onChange={adjustScore} />
+                {question.question}
+            </li>
+        </label>
     )
     return (
         <>
             <form className="bg-white shadow-2xl p-4 rounded-xl">
-                <div className="flex justify-center">
-                    <p>SCORE</p>
+                <div className="flex gap-x-4 justify-center mb-4 text-3xl">
+                    <p className="uppercase">Score</p>
                     <p>{score}</p>
                 </div>
-                <ol className="list-decimal list-inside">
+                <ol className="list-decimal list-inside flex flex-col gap-y-3">
                     {questions}
                 </ol>
             </form>
