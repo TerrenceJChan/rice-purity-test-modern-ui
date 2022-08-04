@@ -12,7 +12,7 @@ const Questionnaire = () => {
     }
     const questions = purityQuestions.map((question) =>
         <label key={question.key + 1} htmlFor={question.key + 1} >
-            <li className="text-xl bg-red-100 transition-colors focus:bg-red-300 p-2 rounded-lg shadow-md cursor-pointer">
+            <li className="text-xl bg-red-100 transition-colors hover:bg-red-300 p-2 rounded-lg shadow-md cursor-pointer">
                 <input type="checkbox" name={question.key + 1} id={question.key + 1} className="mr-1 focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" onChange={adjustScore} />
                 {question.question}
             </li>
